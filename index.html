@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Les Anniversaires en France</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    const buttons = document.querySelectorAll('.button-bar button');
+
+    sections.forEach(section => {
+        if(section.id === id){
+            section.classList.remove('hidden');
+            section.classList.add('visible');
+        } else {
+            section.classList.remove('visible');
+            section.classList.add('hidden');
+        }
+    });
+
+    buttons.forEach(button => {
+        const buttonTarget = button.getAttribute('onclick').match(/'(.+?)'/)[1];
+
+        if(buttonTarget === id){
+            button.disabled = true;
+        } else {
+            button.disabled = false;
+        }
+    });
+}
+
+window.onload = function(){
+    showSection('home');
+};
+</script>
+
+<body>
+
+<header>
+<div class="header-box">
+<h1>Les Anniversaires en France</h1>
+</div>
+</header>
+
+<div class="button-bar">
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('facts')">Holiday Facts</button>
+<button onclick="showSection('culture')">Cultural Importance</button>
+<button onclick="showSection('comparison')">Comparison & Reflection</button>
+<button onclick="showSection('resources')">Resources</button>
+</div>
+
+<section id="home" class="visible">
+
+<h2>French Birthday Traditions</h2>
+
+<p>
+In France, birthdays are called <b>“les anniversaires.”</b>
+They are celebrations where friends and family gather to celebrate
+the birthday person with food, desserts, and gifts.
+</p>
+
+<p>
+Many traditions are similar to birthdays in the United States,
+but French celebrations often focus more on spending time together
+and sharing a meal.
+</p>
+
+</section>
+
+
+<section id="facts" class="hidden">
+
+<h2>Holiday Facts</h2>
+
+<h3>Holiday Name</h3>
+<p>
+In France, birthdays are called <b>“les anniversaires.”</b> The word
+“anniversaire” literally means the anniversary of the day someone was born.
+</p>
+
+<h3>Where It Is Celebrated</h3>
+<p>
+Birthdays are celebrated throughout <b>France</b> and in many other
+<b>French-speaking countries</b> such as Belgium, Switzerland, and parts
+of Canada. While the traditions are similar, each region may celebrate
+in slightly different ways depending on family customs.
+</p>
+
+<h3>When It Is Celebrated</h3>
+<p>
+A birthday is celebrated once each year on the date a person was born.
+Children often celebrate with a party and friends, while adults usually
+celebrate with family dinners or small gatherings.
+</p>
+
+<h3>Key Traditions</h3>
+
+<ul>
+<li>
+<b>Singing “Joyeux anniversaire”</b> – Friends and family sing this
+French birthday song before the birthday person blows out the candles.
+</li>
+
+<li>
+<b>Blowing out candles</b> – The birthday cake usually has candles equal
+to the person’s age, and the person makes a wish before blowing them out.
+</li>
+
+<li>
+<b>Eating desserts</b> – Popular birthday desserts include
+<i>gâteau au chocolat</i> (chocolate cake), fruit tarts, and sometimes
+macarons or pastries.
+</li>
+
+<li>
+<b>Giving gifts</b> – Family and friends give presents such as toys,
+books, clothing, or small luxury items.
+</li>
+
+<li>
+<b>School celebrations</b> – Younger children sometimes bring candy
+or treats to school to share with their classmates.
+</li>
+</ul>
+
+<img src="images/dessert.png" alt="French birthday desserts">
+
+</section>
+
+
+<section id="culture" class="hidden">
+
+<h2>Cultural Importance</h2>
+
+<p>
+Birthdays are an important tradition in French culture because they
+celebrate a person’s life and bring together friends and family.
+While some celebrations are small, they are meaningful moments where
+people share food, conversation, and appreciation for the birthday person.
+</p>
+
+<h3>Why This Celebration Is Important</h3>
+
+<ul>
+<li>
+<b>Family connection</b> – Many French families celebrate birthdays with
+a meal together, strengthening family relationships.
+</li>
+
+<li>
+<b>Celebrating milestones</b> – Birthdays mark important stages of life,
+especially childhood birthdays or milestone ages.
+</li>
+
+<li>
+<b>Social gatherings</b> – Birthdays are also an opportunity for friends
+to gather and celebrate together.
+</li>
+</ul>
+
+<h3>Who Celebrates</h3>
+
+<ul>
+<li>Families</li>
+<li>Friends</li>
+<li>Children at school</li>
+<li>Community groups</li>
+</ul>
+
+<h3>Quote Showing the Spirit of the Holiday</h3>
+
+<p class="quote">
+“Joyeux anniversaire !”
+</p>
+
+<p>
+This phrase means <i>“Happy Birthday!”</i> and is sung during the
+birthday celebration before the candles are blown out.
+</p>
+
+<img src="images/french_birthday_party.png" alt="French birthday celebration">
+
+</section>
+
+<section id="comparison" class="hidden">
+
+<h2>Comparison & Reflection</h2>
+
+<h3>Comparison to Birthdays in the United States</h3>
+
+<p>
+Birthdays in France are similar to birthdays in the United States.
+Both traditions include cake, candles, gifts, and singing a birthday song.
+However, French birthday celebrations are often smaller and more focused
+on sharing a meal with family and close friends instead of having very
+large parties.
+</p>
+
+<p>
+In addition, French birthday desserts are often simpler and may include
+traditional pastries instead of large decorated cakes.
+</p>
+
+<h3>French Sentences Using Holiday Vocabulary</h3>
+
+<p>
+J’aime les anniversaires parce que c’est amusant.
+</p>
+
+<p>
+Nous mangeons un gâteau et nous chantons “Joyeux anniversaire.”
+</p>
+
+<p>
+Ma famille célèbre mon anniversaire avec un dîner spécial.
+</p>
+
+</section>
+
+<section id="resources" class="hidden">
+
+<h2>Sources & Research</h2>
+
+<p>
+The following sources were used to research French birthday traditions
+and cultural customs.
+</p>
+
+<ul class="resource-list">
+
+<li>
+<a href="https://en.wikipedia.org/wiki/Birthday" target="_blank">
+Wikipedia – Birthday Traditions
+</a>
+</li>
+
+<li>
+<a href="https://www.britannica.com/topic/birthday" target="_blank">
+Britannica – Birthday
+</a>
+</li>
+
+<li>
+<a href="https://www.france.fr/en/article/french-traditions-and-customs/" target="_blank">
+France.fr – French Traditions and Customs
+</a>
+</li>
+
+<li>
+<a href="https://www.lawlessfrench.com/vocabulary/birthday/" target="_blank">
+Lawless French – Birthday Vocabulary
+</a>
+</li>
+
+<li>
+<a href="https://www.frenchtoday.com/blog/french-vocabulary/how-to-say-happy-birthday-in-french/" target="_blank">
+French Today – Happy Birthday in French
+</a>
+</li>
+
+</ul>
+
+</section>
+
+</body>
+</html>

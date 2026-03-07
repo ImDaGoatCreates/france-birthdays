@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "FrenchFont";
+    src: url("fonts/Satoshi-Variable.ttf");
+}
+
+body{
+font-family: Georgia, serif;
+margin:0;
+background-image: url("images/background.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family: "FrenchFont", serif;
+}
+
+header{
+text-align:center;
+padding:40px;
+color:white;
+text-shadow:2px 2px 6px black;
+}
+
+section{
+max-width:800px;
+margin:20px auto;
+padding:20px;
+background:rgba(255,255,255,0.85);
+border-radius:10px;
+}
+
+h2{
+text-align:center;
+}
+
+.button-bar{
+text-align:center;
+margin:20px;
+}
+
+.button-bar button{
+background:#002395;
+color:white;
+border:none;
+padding:10px 15px;
+margin:5px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.button-bar button:hover{
+background:#ed2939;
+}
+
+.hidden{
+display:none;
+}
+
+.visible{
+display:block;
+}
+
+.quote{
+font-style:italic;
+font-size:20px;
+text-align:center;
+}
+
+.resource-list{
+list-style:none;
+padding:0;
+text-align:center;
+}
+
+.resource-list li{
+margin:8px;
+}
+
+.button-bar button:disabled{
+background: gray;
+cursor: not-allowed;
+opacity: 0.6;
+}
+
+section img{
+max-width:100%;
+display:block;
+margin:20px auto;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
